@@ -1,0 +1,12 @@
+.Cartpokemon
+{
+  position: absolute;
+  left: calc(41%);
+  top: calc(10%);
+}
+.buttonGroup
+{
+  position: absolute;
+  left: calc(40.7%);
+  top: calc(52%);
+}
