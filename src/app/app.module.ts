@@ -11,6 +11,7 @@ import es from '@angular/common/locales/es';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -22,6 +23,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { CartPokemonComponent } from './Components/cart-pokemon/cart-pokemon.component';
 import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { environment } from 'src/environments/environment.prod';
 registerLocaleData(es);
 @NgModule({
   declarations: [
@@ -49,7 +51,12 @@ registerLocaleData(es);
     EffectsModule.forRoot([GetPokemonEffect]),
     NzCardModule,
     NzImageModule,
-    NzCarouselModule
+    NzCarouselModule,
+    StoreDevtoolsModule.instrument({
+      name: 'pokechafa',
+      maxAge: 25,
+      logOnly: environment.production
+    })
   ],
   providers: [ ...Maint_providers,
     { provide: NZ_I18N, useValue: es_ES }

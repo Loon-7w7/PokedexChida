@@ -15,5 +15,8 @@ export const inicialStatepokemonManager: PokemonState =
     back_shiny: "",
     front_shiny: "",
   },
- types: [{slot:1, type:{name:"",url:""}}]
+  types: [{slot:1, type:{name:"",url:""}}],
+  moves:[{
+    move: { name:''}
+  }]
 }
