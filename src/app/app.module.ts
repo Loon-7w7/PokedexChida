@@ -24,11 +24,14 @@ import { CartPokemonComponent } from './Components/cart-pokemon/cart-pokemon.com
 import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { environment } from 'src/environments/environment.prod';
+import { CollapseAttacksComponent } from './Components/collapse-attacks/collapse-attacks.component';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 registerLocaleData(es);
 @NgModule({
   declarations: [
     AppComponent,
-    CartPokemonComponent
+    CartPokemonComponent,
+    CollapseAttacksComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ registerLocaleData(es);
     EffectsModule.forRoot([GetPokemonEffect]),
     NzCardModule,
     NzImageModule,
+    NzCollapseModule,
     NzCarouselModule,
     StoreDevtoolsModule.instrument({
       name: 'pokechafa',

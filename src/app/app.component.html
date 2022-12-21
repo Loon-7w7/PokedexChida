@@ -3,16 +3,25 @@
     <div class="col">
       <div class="Cartpokemon">
         <app-cart-pokemon [selector]="Selectorapp"></app-cart-pokemon></div>
-    <nz-button-group style="margin: auto;" class="text-center">
-      <button nz-button class="bottonXD" nzType="primary" (click)="anterior()" >
-        <span nz-icon nzType="left"></span>
-        Go back
-      </button>
-      <button nz-button class="bottonXD" nzType="primary" (click)="siguiente()" >
-        Go forward
-        <span nz-icon nzType="right"></span>
-      </button>
-    </nz-button-group>
+        <nz-button-group style="margin: auto;" class="text-center">
+          <button nz-button class="bottonXD" nzType="primary" (click)="anterior()" >
+            <span nz-icon nzType="left"></span>
+            Go back
+          </button>
+          <button nz-button class="bottonXD" nzType="primary" (click)="siguiente()" >
+            Go forward
+            <span nz-icon nzType="right"></span>
+          </button>
+        </nz-button-group>
+
   </div>
     </div>
+</div>
+<hr/>
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <app-collapse-attacks [selector]="Selectorapp"></app-collapse-attacks>
+    </div>
+  </div>
 </div>
