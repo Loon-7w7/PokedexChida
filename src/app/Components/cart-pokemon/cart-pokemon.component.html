@@ -1,12 +1,12 @@
-<nz-card nzHoverable style="width:240px; margin: auto;" [nzCover]="coverTemplate">
+<nz-card nzHoverable style="width:240px;  margin: auto;" [nzCover]="coverTemplate">
   <nz-card-meta [nzTitle]="pokemonData.name" [nzDescription]="Descriptiontemplate"></nz-card-meta>
 </nz-card>
 <ng-template #coverTemplate>
   <nz-carousel nzAutoPlay>
     <div nz-carousel-content *ngFor="let index of array">
-      <img nz-image
-      width="250px"
-      height="200px" [nzSrc]="index"
+      <img nz-image style="margin: auto; margin-top: 40px;"
+      width="100px"
+      height="100px" [nzSrc]="index"
       alt="" />
     </div>
   </nz-carousel>

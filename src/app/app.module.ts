@@ -26,12 +26,15 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { environment } from 'src/environments/environment.prod';
 import { CollapseAttacksComponent } from './Components/collapse-attacks/collapse-attacks.component';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { ListpokedexComponent } from './Components/listpokedex/listpokedex.component';
+import { NzFormModule } from 'ng-zorro-antd/form';
 registerLocaleData(es);
 @NgModule({
   declarations: [
     AppComponent,
     CartPokemonComponent,
-    CollapseAttacksComponent
+    CollapseAttacksComponent,
+    ListpokedexComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ registerLocaleData(es);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
+    NzFormModule,
     NzButtonModule,
     EffectsModule.forRoot([GetPokemonEffect]),
     NzCardModule,

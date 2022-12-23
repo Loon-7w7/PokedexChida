@@ -31,13 +31,11 @@ export class CartPokemonComponent implements OnInit {
     subscribe(data => {
       if(data?.name)
       {
-        this.pokemonData = data;
+        this.pokemonData = data; debugger
         this.array =
         [
-          data.sprites.front_default,
-          data.sprites.back_default,
-          data.sprites.front_shiny,
-          data.sprites.back_shiny
+          data.sprites.versions["generation-vi"]["x-y"].front_default,
+          data.sprites.versions["generation-vi"]["x-y"].front_shiny,
         ];
 
       }

@@ -1,27 +1,29 @@
-<div class="container">
-  <div class="row text-center">
-    <div class="col">
-      <div class="Cartpokemon">
-        <app-cart-pokemon [selector]="Selectorapp"></app-cart-pokemon></div>
-        <nz-button-group style="margin: auto;" class="text-center">
-          <button nz-button class="bottonXD" nzType="primary" (click)="anterior()" >
-            <span nz-icon nzType="left"></span>
-            Go back
-          </button>
-          <button nz-button class="bottonXD" nzType="primary" (click)="siguiente()" >
-            Go forward
-            <span nz-icon nzType="right"></span>
-          </button>
-        </nz-button-group>
 
-  </div>
-    </div>
-</div>
-<hr/>
-<div class="container">
-  <div class="row text-center">
-    <div class="col">
-      <app-collapse-attacks [selector]="Selectorapp"></app-collapse-attacks>
+<div class="container ">
+  <div class="row text-center ">
+    <div class="col ">
+      <div class="containerpokedex">
+        <div class="header">
+          <img class="imagenPokex" src="https://icon-library.com/images/pokedex-icon/pokedex-icon-21.jpg" alt="">
+          <span class="titulopokex">Pokedex</span>
+          <div class="ladoCentro">
+            <img class="Climaimagen" src="http://capitanjoy.com.ar/wp-content/uploads/2017/03/circulo_cirrus.png" alt="">
+          </div>
+          <div class="ladoDerecho">
+            <span nz-icon nzType="cloud" nzTheme="outline" class="nuebeIcono"></span>
+            <button class="Buttonsalir" nz-button nzType="primary" nzSize="large" nzShape="round">
+              Y <span class="iconosalir" nz-icon nzType="import" nzTheme="outline"></span>
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <app-listpokedex></app-listpokedex>
+        </div>
+        <div class="footer">
+          <Button nz-button class="botonB">+</Button> <span class="spamBotmb">Habitat</span>
+          <Button nz-button class="botonB">B</Button> <span class="spamBotmb">Back</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

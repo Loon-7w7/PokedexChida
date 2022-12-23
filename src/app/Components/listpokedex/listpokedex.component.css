@@ -1,0 +1,89 @@
+.headerpodex
+{
+  width: 100%;
+  height: 60px;
+  background-color: #07243b;
+  display: flex;
+  align-items: center;
+}
+
+.cuerpo
+{
+  width: 100%;
+  height: 485px;
+  background-image: url('https://d3ugyf2ht6aenh.cloudfront.net/stores/060/738/products/looma-vinilos-murales-madera-paraiso11-d2bc90141ea1f655e816177304130092-1024-1024.jpg');
+  background-size: cover;
+}
+
+.izquierda
+{
+  width: 35%;
+  display: flex;
+}
+.centro
+{
+  width: 30%;
+}
+.derecho
+{
+  width: 35%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pokeball{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: xx-large;
+  font-weight: 600;
+  color: white;
+  }
+.atrapados{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: xx-large;
+  font-weight: 600;
+  color: white;
+  }
+.lienaizquierda
+{
+  border-left: 2px solid gray;
+}
+.insignia{
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: xx-large;
+  font-weight: 600;
+  color: white;
+  }
+
+
+.PokebalIcono
+{
+  margin-left: 20px;
+  width: 45px;
+  height: 45px;
+}
+.tituloPokedex
+{
+  font-size: xx-large;
+  font-weight: 600;
+  color: white;
+}
+
+.iconoselector
+{
+  margin-left: 20px;
+  font-size: 40px;
+  color: aliceblue;
+}
+.ordenado
+{
+  margin-left: 20px;
+  font-size: x-large;
+  font-weight: 600;
+  color: white;
+}
