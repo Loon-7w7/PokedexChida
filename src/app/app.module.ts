@@ -30,6 +30,8 @@ import { ListpokedexComponent } from './Components/listpokedex/listpokedex.compo
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { PokedexItemComponent } from './Components/pokedex-item/pokedex-item.component';
 import { GetPokedexEffect } from './store/effects/pokedex/getPokedex.effect';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { listPokedexEffect } from './store/effects/pokedex/lispokedex.effect';
 registerLocaleData(es);
 @NgModule({
   declarations: [
@@ -58,11 +60,12 @@ registerLocaleData(es);
     NzMenuModule,
     NzFormModule,
     NzButtonModule,
-    EffectsModule.forRoot([GetPokemonEffect,GetPokedexEffect]),
+    EffectsModule.forRoot([GetPokemonEffect,GetPokedexEffect,listPokedexEffect]),
     NzCardModule,
     NzImageModule,
     NzCollapseModule,
     NzCarouselModule,
+    NzSelectModule,
     StoreDevtoolsModule.instrument({
       name: 'pokechafa',
       maxAge: 25,

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { distinctUntilChanged, Observable, Subject, takeUntil } from 'rxjs';
 import { Pokemon } from './models/pokemon/pokemon.model';
+import { GetListPokedexAction } from './store/actios/pokedex/getListpokedex.action';
 import { GetPokedexAction } from './store/actios/pokedex/getPokedex.action';
 import { GetPokemonAction } from './store/actios/pokemon/get-pokemon.acction';
 import { AppState } from './store/app-state/app-state.model';
@@ -20,6 +21,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this._store.dispatch(new GetPokedexAction(2));
+    this._store.dispatch(new GetListPokedexAction())
   }
 
 }

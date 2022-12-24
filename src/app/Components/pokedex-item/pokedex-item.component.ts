@@ -20,7 +20,6 @@ export class PokedexItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger
     this.pokemon_entris.entry_number;
   }
 

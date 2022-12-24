@@ -8,4 +8,6 @@ export enum ActionsConstans
 
   GetPokedexAction = '[Pokedex] Getokedex Action',
   PokedexLoadSuccessAction = '[Pokedex] load success pokedex Action',
+  GetListPokedexAction = '[Pokedex] Get Lista Pokedex Action',
+  ListPodexLoadSuccessAction = '[Pokedex] load success Lista Pokedex Action'
 }

@@ -14,8 +14,15 @@
     <span class="tituloPokedex">Pokedex</span>
   </div>
   <div class="derecho lienaizquierda">
-    <span nz-icon nzType="menu" nzTheme="outline" class="iconoselector"></span>
-    <span class="ordenado">Ordenado por Numero</span>
+
+    <nz-select class="selectpokdex" [ngModel]="selecvalue"
+    nzPlaceHolder="Seleciona una region"
+    (ngModelChange)="selectRegion($event)">
+      <div *ngFor="let item of results">
+        <nz-option [nzValue]="item.name" [nzLabel]="item.name|titlecase" (click)="selectRegion(item.name)"></nz-option>
+      </div>
+
+    </nz-select>
   </div>
 </div>
 
