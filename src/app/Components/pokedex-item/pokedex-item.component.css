@@ -1,0 +1,51 @@
+.contenedor
+{
+  height: 100%;
+  width: 100%;
+}
+.itembisible
+{
+  margin-left: 10px;
+  background-color: #b7b294;
+  height: 100%;
+  width: 70px;
+  -webkit-box-shadow: 2px 2px 19px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 19px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 19px 0px rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itembisible:hover
+{
+  border: 4px solid #768f0a;
+}
+
+.contenido
+{
+  width: 100%;
+  height: 90%;
+  border-top: 5px solid #d8f846;
+  border-bottom: 5px solid #d8f846;
+
+}
+.nombrecontainer
+{
+  width: 90%;
+  margin-top: 20px;
+  transform: rotate(0.25turn);
+}
+.PokemonNombre
+{
+  font-size: xx-large;
+  font-weight: 600;
+
+}
+.numberocontenedor
+{
+  height: 78%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
