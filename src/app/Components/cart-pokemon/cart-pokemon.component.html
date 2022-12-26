@@ -8,7 +8,7 @@
 <div class="contenderType">
   <div class="ContTypes">
   <div class="Type" *ngFor="let item of pokemonData.types" [style]="getStyleTypos.get(item.type.name)">
-    <span>{{item.type.name}}</span>
+    <span>{{item.type.name|titlecase}}</span>
   </div>
 </div>
 </div>
