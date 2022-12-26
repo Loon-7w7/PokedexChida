@@ -1,7 +1,7 @@
 <div class="contenedor">
-  <div class="itembisible">
+  <div class="itembisible" (click)="selectPokemon()">
     <div class="contenido">
-      <div class="nombrecontainer"><span class="PokemonNombre">{{pokemon_entris.pokemon_species.name|titlecase}}</span></div>
+      <div class="nombrecontainer"><span class="PokemonNombre">{{pokemon_entris.pokemon_species.name.replace('-',' ')|titlecase}}</span></div>
       <div class="numberocontenedor"><span class="PokemonNombre">{{pokemon_entris.entry_number}}</span></div>
     </div>
   </div>

@@ -15,7 +15,7 @@ export class DefaulPokemonService implements PokemonEndpointService {
 
   }
 
-  getPokemonById(id: number): Observable<Pokemon>
+  getPokemonById(id: number | string): Observable<Pokemon>
   {
     return this.http.get<Pokemon>('https://pokeapi.co/api/v2/pokemon/'+id);
   }

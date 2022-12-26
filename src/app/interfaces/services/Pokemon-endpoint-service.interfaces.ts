@@ -7,5 +7,5 @@ export const Pokemon_Endpoint_services = new InjectionToken<PokemonEndpointServi
 
 export interface PokemonEndpointService
 {
-  getPokemonById(id: number): Observable<Pokemon>;
+  getPokemonById(id: number | string): Observable<Pokemon>;
 }

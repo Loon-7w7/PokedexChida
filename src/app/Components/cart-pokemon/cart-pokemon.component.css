@@ -1,7 +1,61 @@
-[nz-carousel-content] {
-  height: 100px;
-  background: #364d79;
-  color: #fff;
-  margin: 0px;
+.Sprite
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contenerStat
+{
+  margin-top: 50px;
+}
+.Stats
+{
+  display: flex;
+  justify-content: center;
+}
+.statname
+{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 130px;
+  font-size: large;
+  font-weight: 600;
+}
+.statNumber
+{
+  margin-right: 70px;
+  font-size: large;
+  font-weight: 600;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
+.ContTypes
+{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 60px;
+}
+.contenderType
+{
+  display: flex;
+  justify-content: center;
+}
+.Type
+{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 5px;
+  -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.75);
+}

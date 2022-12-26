@@ -19,7 +19,9 @@ export function ListPokedexManagerReducer(
             isLoading: false,
           };
         case ActionsConstans.ListPodexLoadSuccessAction:
-            return action.pokedexs
+            return {
+              results: action.pokedexs.results
+            }
       default:
           return state;
     }

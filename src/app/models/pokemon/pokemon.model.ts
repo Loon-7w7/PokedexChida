@@ -11,7 +11,9 @@ export interface Pokemon
     slot: number,
     type:ElemnetalType
   }];
-  moves: [{
-    move: BaseName
+  stats:
+  [{
+    base_stat: number,
+    stat: BaseName
   }]
 }

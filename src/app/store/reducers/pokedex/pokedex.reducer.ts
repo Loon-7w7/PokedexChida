@@ -18,7 +18,10 @@ export function pokedexManagerReducer(
             isLoading: false,
           };
         case ActionsConstans.PokedexLoadSuccessAction:
-            return action.pokedex
+            return {
+              name: action.pokedex.name,
+              pokemon_entries:action.pokedex.pokemon_entries
+            }
       default:
           return state;
     }

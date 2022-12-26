@@ -30,9 +30,13 @@
 <div class="cuerpo container">
   <div class="listadeitems" >
     <div *ngFor="let pokemon of pokemonentries">
-      <app-pokedex-item [pokemon_entris]="pokemon"></app-pokedex-item>
+      <app-pokedex-item [pokemon_entris]="pokemon" (pokemonName)="selectpokemon($event)"></app-pokedex-item>
     </div>
 
   </div>
-  <div class="footerconten"></div>
+  <div class="footerconten">
+    <button class="ButtonVerPokemon" nz-button nzType="primary" nzSize="large" (click)="verpokemon()">
+      {{pokemonselect|titlecase}}
+    </button>
+  </div>
 </div>

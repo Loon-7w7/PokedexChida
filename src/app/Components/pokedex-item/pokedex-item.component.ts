@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { pokemon_entry } from 'src/app/models/pokedex/pokemon_entrys.model';
 
 @Component({
@@ -16,12 +16,16 @@ export class PokedexItemComponent implements OnInit {
       url: ''
     }
   };
+  @Output() pokemonName = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.pokemon_entris.entry_number;
   }
 
+  selectPokemon()
+  {
+    this.pokemonName.emit(this.pokemon_entris.pokemon_species.name);
+  }
 
 }

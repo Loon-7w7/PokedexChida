@@ -19,25 +19,25 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { EffectsModule } from '@ngrx/effects';
 import { GetPokemonEffect } from './store/effects/pokemon/getPokemon.effect';
 import { Maint_providers } from './main-providers.instances';
-import { NzCardModule } from 'ng-zorro-antd/card';
 import { CartPokemonComponent } from './Components/cart-pokemon/cart-pokemon.component';
 import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { environment } from 'src/environments/environment.prod';
-import { CollapseAttacksComponent } from './Components/collapse-attacks/collapse-attacks.component';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { ListpokedexComponent } from './Components/listpokedex/listpokedex.component';
-import { NzFormModule } from 'ng-zorro-antd/form';
 import { PokedexItemComponent } from './Components/pokedex-item/pokedex-item.component';
 import { GetPokedexEffect } from './store/effects/pokedex/getPokedex.effect';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { listPokedexEffect } from './store/effects/pokedex/lispokedex.effect';
+import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+
 registerLocaleData(es);
 @NgModule({
   declarations: [
     AppComponent,
     CartPokemonComponent,
-    CollapseAttacksComponent,
     ListpokedexComponent,
     PokedexItemComponent
   ],
@@ -58,14 +58,15 @@ registerLocaleData(es);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    NzFormModule,
     NzButtonModule,
     EffectsModule.forRoot([GetPokemonEffect,GetPokedexEffect,listPokedexEffect]),
-    NzCardModule,
     NzImageModule,
     NzCollapseModule,
     NzCarouselModule,
     NzSelectModule,
+    NzMessageModule,
+    NzModalModule,
+    NzDescriptionsModule,
     StoreDevtoolsModule.instrument({
       name: 'pokechafa',
       maxAge: 25,

@@ -1,73 +1,28 @@
-<nz-card nzHoverable style="width:240px;  margin: auto;" [nzCover]="coverTemplate">
-  <nz-card-meta [nzTitle]="pokemonData.name" [nzDescription]="Descriptiontemplate"></nz-card-meta>
-</nz-card>
-<ng-template #coverTemplate>
-  <nz-carousel nzAutoPlay>
-    <div nz-carousel-content *ngFor="let index of array">
-      <img nz-image style="margin: auto; margin-top: 40px;"
-      width="100px"
-      height="100px" [nzSrc]="index"
-      alt="" />
-    </div>
-  </nz-carousel>
-</ng-template>
+<div class="Sprite">
+  <img nz-image
+  width="150px"
+  height="150px" [nzSrc]="ImgPokemon"
+  alt="" />
+</div>
 
-<ng-template #Descriptiontemplate>
-  <div *ngFor="let types of pokemonData.types">
-    <div *ngIf="types.type.name == 'normal' ">
-      <p style="background-color: #ECE7DB;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'steel' ">
-      <p style="background-color: #DEDEDE;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'water'  ">
-      <p style="background-color: #21C8D6; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'bug' ">
-      <p style="background-color: #D9F151;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'dragon' ">
-      <p style="background-color: #9271F6; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'electric' ">
-      <p style="background-color: #FFE401; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'ghost' ">
-      <p style="background-color: #403C90; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'fire' ">
-      <p style="background-color: #EE6B48; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'fairy' ">
-      <p style="background-color: #FDC9FF;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'ice' ">
-      <p style="background-color: #C2FFF1;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'fighting' ">
-      <p style="background-color: #F69807; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'grass' ">
-      <p style="background-color: #50B21B; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'psychic' ">
-      <p style="background-color: #F456FB; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'rock' ">
-      <p style="background-color: #E0CBA8;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'dark' ">
-      <p style="background-color: #4D3D3D; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'ground' ">
-      <p style="background-color: #F0C284;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'poison' ">
-      <p style="background-color: #553AD6; color: #fff;" >{{types.type.name}}</p>
-    </div>
-    <div *ngIf="types.type.name == 'flying' ">
-      <p style="background-color: #AAE2DF;" >{{types.type.name}}</p>
-    </div>
+<div class="contenderType">
+  <div class="ContTypes">
+  <div class="Type" *ngFor="let item of pokemonData.types" [style]="getStyleTypos.get(item.type.name)">
+    <span>{{item.type.name}}</span>
   </div>
-</ng-template>
+</div>
+</div>
+
+<div class="contenerStat">
+  <h4 class="statname">Stats</h4>
+  <div class="Stats" *ngFor="let item of pokemonData.stats">
+    <div class="statname">
+      <Span>{{item.stat.name }}:</Span>
+    </div>
+    <div class="statNumber">
+      <Span>{{item.base_stat }}</Span>
+    </div>
+
+  </div>
+</div>
 

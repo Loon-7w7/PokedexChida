@@ -6,5 +6,5 @@ export class GetPokemonAction implements Action
 {
   readonly type = ActionsConstans.GetPokemonAction;
 
-  constructor(public id: number){}
+  constructor(public id: number | string){}
 }

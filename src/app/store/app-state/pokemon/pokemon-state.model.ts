@@ -10,17 +10,20 @@ export const inicialStatepokemonManager: PokemonState =
 {
   name: "",
   types: [{ slot: 1, type: { name: "", url: "" } }],
-  moves: [{
-    move: { name: '' }
-  }],
   sprites: {
-    versions:{
-      'generation-vi':{
-        'x-y':{
-          front_default: '',
-          front_shiny: ''
-        }
+    other: {
+      'official-artwork': {
+          front_default: ''
       }
     }
-  }
+  },
+  stats: [
+    {
+      base_stat: 0,
+      stat:
+      {
+        name:''
+      }
+    }
+  ]
 }

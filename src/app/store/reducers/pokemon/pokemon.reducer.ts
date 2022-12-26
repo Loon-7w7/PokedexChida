@@ -20,8 +20,15 @@ export function pokemonManagerReducer(
             isLoading: false,
           };
         case ActionsConstans.PokemonLoadSuccessAction:
-            return action.pokemon
+            return {
+              name: action.pokemon.name,
+              sprites: action.pokemon.sprites,
+              types: action.pokemon.types,
+              stats: action.pokemon.stats
+            };
       default:
           return state;
     }
   }
+
+

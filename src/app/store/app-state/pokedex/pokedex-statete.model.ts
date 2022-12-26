@@ -8,5 +8,5 @@ export interface PokedexState extends Pokedex
 export const inicialStatepokedexManager: PokedexState =
 {
   name: "",
-  pokemon_entries: []
+  pokemon_entries: [],
 }

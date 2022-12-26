@@ -1,13 +1,10 @@
 export interface Sprites
 {
 
-    versions: {
-      'generation-vi':
+    other: {
+      'official-artwork':
       {
-        'x-y': {
-          front_default: string,
-          front_shiny: string
-        }
+        front_default:string
       }
     }
   }
