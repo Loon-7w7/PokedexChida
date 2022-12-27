@@ -1,6 +1,6 @@
 {
-  "name": "pokedex-chida",
-  "version": "0.0.0",
+  "name": "pokedex-paldea-angular",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",

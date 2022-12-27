@@ -32,6 +32,7 @@ import { listPokedexEffect } from './store/effects/pokedex/lispokedex.effect';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { FirmaComponent } from './Components/firma/firma.component';
 
 registerLocaleData(es);
 @NgModule({
@@ -39,7 +40,8 @@ registerLocaleData(es);
     AppComponent,
     CartPokemonComponent,
     ListpokedexComponent,
-    PokedexItemComponent
+    PokedexItemComponent,
+    FirmaComponent
   ],
   imports: [
     BrowserModule,

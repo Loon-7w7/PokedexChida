@@ -1,0 +1,10 @@
+.centrar
+{
+  display: flex;
+  justify-content: center;
+}
+.flexStart
+{
+  display: block;
+  text-align: start;
+}

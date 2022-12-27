@@ -1,14 +1,11 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { distinctUntilChanged, Observable, Subject, takeUntil } from 'rxjs';
-import { Pokemon } from './models/pokemon/pokemon.model';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { FirmaComponent } from './Components/firma/firma.component';
 import { GetListPokedexAction } from './store/actios/pokedex/getListpokedex.action';
 import { GetPokedexAction } from './store/actios/pokedex/getPokedex.action';
-import { GetPokemonAction } from './store/actios/pokemon/get-pokemon.acction';
 import { AppState } from './store/app-state/app-state.model';
-import { inicialStatepokemonManager } from './store/app-state/pokemon/pokemon-state.model';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,12 +13,20 @@ import { inicialStatepokemonManager } from './store/app-state/pokemon/pokemon-st
 })
 export class AppComponent implements OnInit {
   Selectorapp: number = 133;
-  constructor(protected _store: Store<AppState>)
+  constructor(protected _store: Store<AppState>,private modalService: NzModalService, private titulo: Title)
   {
+    titulo.setTitle('Pokedex Paldea Angular');
   }
   ngOnInit(): void {
     this._store.dispatch(new GetPokedexAction(2));
     this._store.dispatch(new GetListPokedexAction())
   }
 
+  VerFimra():void
+  {
+    this.modalService.create({
+      nzTitle: 'Creditos',
+      nzContent: FirmaComponent
+    });
+  }
 }
